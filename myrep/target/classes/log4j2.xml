@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
+        </Console>
+        <File name="File" fileName="E:\\NewProject\\NewProject\\src\\main\\resources\\logs\\Log4j2.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.sdetadda" level="info" additivity="true">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+
+<!--    &lt;!&ndash; Email Appender &ndash;&gt;-->
+<!--    <appender name="ERROR_MAIL" class="SecureSMTPAppender">-->
+<!--    <param name="SMTPUsername" value="java@way2automation.com" />-->
+<!--    <param name="SMTPPassword" value="8923567928475" />-->
+<!--    <param name="To" value="trainer@way2automation.com,seleniumcoaching@gmail.com"/>-->
+<!--    <param name="From" value="java@way2automation.com"/>-->
+<!--    <param name="Subject" value="Log4j Error in Project"/>-->
+<!--    <param name="SMTPHost" value="smtp.gmail.com"/>-->
+
+<!--    <param name="BufferSize" value="10"/>-->
+<!--    <layout class="org.apache.log4j.PatternLayout">-->
+<!--        <param name="ConversionPattern" value="%d{dd/MM/yyyy HH:mm:ss} %-5p %c{2} - %m%n"/>-->
+<!--    </layout>-->
+<!--    <filter class="org.apache.log4j.varia.LevelRangeFilter">-->
+<!--        <param name="LevelMin" value="ERROR"/>-->
+<!--        <param name="LevelMax" value="FATAL"/>-->
+<!--    </filter>-->
+</Configuration>

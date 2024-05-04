@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite1</th></tr>
+<tr><td><a href="#t0">Login Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7</td><td>login</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Login Tests1</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,374</td><td>login</td><td>qwe</td></tr>
+<tr><td><a href="#t2">Screenshot Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>login</td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">5,381</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Login Tests1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests1</td><td><a href="#m0">doLogin1</a></td><td rowspan="1">1714325584102</td><td rowspan="1">808</td></tr><tr><th colspan="4">Login Tests1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Tests1</td><td><a href="#m1">doLogin2</a></td><td rowspan="1">1714325582462</td><td rowspan="1">852</td></tr><tr class="passedeven"><td><a href="#m2">doLogin3</a></td><td rowspan="1">1714325580583</td><td rowspan="1">1109</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4" class="invisible"/></tr></tbody>
+</table>
+<h2>Login Test</h2><h2>Login Tests1</h2><h3 id="m0">Tests1#doLogin1</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href="E:\NewProject\screenshot.jpg" target="_blank">Screenshot link<br/><br><br/><a href="E:\NewProject\screenshot.jpg" target="_blank"><img height=150 width=150 src="E:\NewProject\screenshot.jpg"></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [16] but found [15]
+	at Tests1.doLogin1(Tests1.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests1#doLogin2</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href="E:\NewProject\screenshot.jpg" target="_blank">Screenshot link<br/><br><br/><a href="E:\NewProject\screenshot.jpg" target="_blank"><img height=150 width=150 src="E:\NewProject\screenshot.jpg"></div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests1#doLogin3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Screenshot Test</h2></body>
+</html>

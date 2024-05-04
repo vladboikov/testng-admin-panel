@@ -1,0 +1,16 @@
+
+[ERROR] 2024-04-22 07:15:52.553 [main] TestLog4J - This is a Debug log12312312344445555
+[INFO ] 2024-04-22 07:15:52.555 [main] TestLog4J - This is an Info log123123123
+[INFO ] 2024-04-22 07:15:52.555 [main] TestLog4J - Error in a Project123123123
+[ERROR] 2024-04-22 07:16:37.885 [main] TestLog4J - This is a Debug log12312312344445555
+[INFO ] 2024-04-22 07:16:37.887 [main] TestLog4J - This is an Info log123123123
+[INFO ] 2024-04-22 07:16:37.887 [main] TestLog4J - Error in a Project123123123
+[ERROR] 2024-04-25 18:57:39.665 [main] TestLog4J - This is a Debug log12312312344445555
+[INFO ] 2024-04-25 18:57:39.667 [main] TestLog4J - This is an Info log123123123
+[INFO ] 2024-04-25 18:57:39.667 [main] TestLog4J - Error in a Project123123123
+[ERROR] 2024-04-25 18:57:50.501 [main] TestLog4J - This is a Debug log12312312344445555
+[INFO ] 2024-04-25 18:57:50.503 [main] TestLog4J - This is an Info log123123123
+[INFO ] 2024-04-25 18:57:50.503 [main] TestLog4J - Error in a Project123123123
+[ERROR] 2024-04-25 18:57:59.056 [main] TestLog4J - This is a Debug log12312312344445555
+[INFO ] 2024-04-25 18:57:59.058 [main] TestLog4J - This is an Info log123123123
+[INFO ] 2024-04-25 18:57:59.058 [main] TestLog4J - Error in a Project123123123
