@@ -3,11 +3,10 @@
 <suite name="Suite1">
     <test name="Login Test">
         <classes>
-            <class name="ExtentReports"/>
+            <class name="regression.AllureTest"/>
         </classes>
     </test>
     <listeners>
-        <listener class-name="listeners.ExtentListeners"/>
-        <listener class-name="TestListener"/>
+        <listener class-name="listeners.CustomListeners"/>
     </listeners>
 </suite>

@@ -1,9 +1,9 @@
 package listeners;
 
 import base.TestBase;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+//import com.aventstack.extentreports.ExtentReports;
+//import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+//import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -15,24 +15,23 @@ import java.util.GregorianCalendar;
 
 public class ExtentManager extends TestBase {
 
-	private static ExtentReports extent;
-
-	public static ExtentReports createInstance(String fileName) {
-		ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
-
-		htmlReporter.config().setTheme(Theme.STANDARD);
-		htmlReporter.config().setDocumentTitle(fileName);
-		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setReportName(fileName);
-
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Automation Tester", "Rahul Arora");
-		extent.setSystemInfo("Organization", "Way2Automation");
-		extent.setSystemInfo("Build no", "W2A-1234");
-
-		return extent;
-	}
+//	private static ExtentReports extent;
+//
+//	public static ExtentReports createInstance(String fileName) {
+//		ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
+//		htmlReporter.config().setEncoding("utf-8");
+//		htmlReporter.config().setDocumentTitle(fileName);
+//		htmlReporter.config().setReportName(fileName);
+//		htmlReporter.config().setTheme(Theme.DARK);
+//
+//		extent = new ExtentReports();
+//		extent.attachReporter(htmlReporter);
+//		extent.setSystemInfo("Automation Tester", "Vlad");
+//		extent.setSystemInfo("Organization", "Learning");
+//		extent.setSystemInfo("Build No", "1.0.0");
+//
+//		return extent;
+//	}
 
 	public static String captureScreenshot(String methodName) throws IOException {
 
