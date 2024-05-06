@@ -62,7 +62,7 @@ public class TestBase {
         options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
         driver = new ChromeDriver(options);
         initialWindow = driver.getWindowHandle();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(11));
 //        Thread.sleep(2000);
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
