@@ -1,11 +1,11 @@
 package regression;
 
-import base.TestBase;
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class regTests extends TestBase {
+public class regTests extends BaseTest {
 
     @Test(priority = 5, groups = "qwe")
     public void doLogin() {

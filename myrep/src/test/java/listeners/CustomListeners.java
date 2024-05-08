@@ -1,17 +1,15 @@
 package listeners;
 
+import base.BaseTest;
 import io.qameta.allure.Allure;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 
-
-public class CustomListeners implements ITestListener {
-    public InputStream is;
+public class CustomListeners extends BaseTest implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -21,16 +19,16 @@ public class CustomListeners implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         String methodName = result.getMethod().getMethodName();
         String logText = "<b>" + "TEST CASE: " + methodName.toUpperCase() + " PASSED" + "</b>";
+        log.info(logText);
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        try {
-            is = new FileInputStream("E:\\NewProject\\screenshot.jpg");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        Allure.addAttachment("Screenshot", is);
+        Allure.getLifecycle().addAttachment(
+                "Screenshot", "image/png", "png",
+                ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)
+        );
+        log.info("TEST FAILED");
     }
 
     @Override

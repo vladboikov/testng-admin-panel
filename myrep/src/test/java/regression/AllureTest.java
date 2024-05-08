@@ -1,6 +1,6 @@
 package regression;
 
-import base.TestBase;
+import base.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.SkipException;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 @Epic("epic name")
 @Feature("feature name")
-public class AllureTest extends TestBase {
+public class AllureTest extends BaseTest {
 
     @Test
     @Description("Main Test")
