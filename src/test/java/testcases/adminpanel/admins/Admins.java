@@ -11,8 +11,8 @@ import pages.locators.DashboardPageLocators;
 
 public class Admins extends BaseTest {
 
-    @Epic("Admin PanelLLLLLLLLLLLLLLLLLLLLLLLLLLLL")
-    @Description("Admin Login Test")
+    @Epic("Admin Panel")
+    @Description("Admin Login Testtttttttttttttttttttttttttttttt")
     @Test
     public void doLogin() {
         SignInPage page = new SignInPage(driver, Roles.ADMIN);

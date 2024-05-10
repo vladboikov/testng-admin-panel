@@ -9,8 +9,9 @@ import static base.BasePage.driver;
 
 public class DashboardPageLocators {
 
+
     public DashboardPageLocators() {
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
     }
 
     @FindBy(xpath = "//div[@id='sidebar']")
