@@ -11,7 +11,7 @@ public class DashboardPageLocators {
 
 
     public DashboardPageLocators() {
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
     @FindBy(xpath = "//div[@id='sidebar']")
