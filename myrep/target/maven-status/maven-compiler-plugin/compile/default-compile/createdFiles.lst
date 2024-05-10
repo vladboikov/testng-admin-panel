@@ -1,0 +1,5 @@
+base\BasePage.class
+pages\actions\SignInPage.class
+pages\HomePage.class
+pages\locators\SignInPageLocators.class
+base\Constants.class
