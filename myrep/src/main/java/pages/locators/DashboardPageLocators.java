@@ -13,6 +13,6 @@ public class DashboardPageLocators {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-    @FindBy(xpath = "//div[@id='sidebar1']")
+    @FindBy(xpath = "//div[@id='sidebar']")
     public WebElement sidebar;
 }

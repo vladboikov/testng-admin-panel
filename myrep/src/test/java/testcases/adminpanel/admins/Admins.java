@@ -11,7 +11,7 @@ import pages.locators.DashboardPageLocators;
 
 public class Admins extends BaseTest {
 
-    @Epic("Admin Panel")
+    @Epic("Admin PanelLLLLLLLLLLLLLLLLLLLLLLLLLLLL")
     @Description("Admin Login Test")
     @Test
     public void doLogin() {

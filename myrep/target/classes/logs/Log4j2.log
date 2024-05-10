@@ -206,3 +206,15 @@
 [INFO ] 2024-05-09 22:12:22.088 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
 [DEBUG] 2024-05-09 22:24:28.565 [main] BaseTest - Launching Chrome
 [INFO ] 2024-05-09 22:24:30.639 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-09 22:25:11.695 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-09 22:25:13.770 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-09 22:27:17.787 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-09 22:27:19.765 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-09 22:28:48.292 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-09 22:28:50.241 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-09 22:35:59.572 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-09 22:36:01.953 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-09 22:39:34.257 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-09 22:39:36.202 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-09 22:40:03.131 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-09 22:40:05.114 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
