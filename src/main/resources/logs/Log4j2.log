@@ -275,3 +275,7 @@
 [INFO ] 2024-05-10 01:17:45.451 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
 [DEBUG] 2024-05-10 01:19:21.898 [main] BaseTest - Launching Chrome
 [INFO ] 2024-05-10 01:19:33.192 [main] BaseTest - TEST FAILED
+[DEBUG] 2024-05-10 01:21:26.857 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-10 01:21:28.796 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
+[DEBUG] 2024-05-10 01:22:11.503 [main] BaseTest - Launching Chrome
+[INFO ] 2024-05-10 01:22:13.507 [main] BaseTest - <b>TEST CASE: DOLOGIN PASSED</b>
