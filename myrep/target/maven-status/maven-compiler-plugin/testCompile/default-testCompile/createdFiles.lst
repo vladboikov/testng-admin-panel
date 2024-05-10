@@ -1,0 +1,6 @@
+base\BaseTest.class
+regression\regTests.class
+regression\regTests1.class
+utils\UtilTest.class
+listeners\CustomListeners.class
+testcases\adminpanel\admins\Admins.class
