@@ -1,5 +1,6 @@
 package base;
 
+import base.data.InstanceData;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
-import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -37,10 +37,10 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
-        if (Constants.BROWSER.equals("firefox")) {
+        if (InstanceData.BROWSER.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             log.debug("Launching Firefox");
-        } else if (Constants.BROWSER.equals("chrome")) {
+        } else if (InstanceData.BROWSER.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             Map<String, Object> prefs = new HashMap<String, Object>();
             prefs.put("profile.default_content_setting_values.notifications", 2);
@@ -65,12 +65,12 @@ public class BaseTest {
                 driver.switchTo().window(winHandle);
             }
             log.debug("Launching Chrome");
-        } else if (Constants.BROWSER.equals("ie")) {
+        } else if (InstanceData.BROWSER.equals("ie")) {
             WebDriverManager.iedriver().setup();
             log.debug("Launching IE");
         }
         driver.manage().window().maximize();
-        driver.get(Constants.TEST_SUITE_URL);
+        driver.get(InstanceData.TEST_SUITE_URL);
     }
 
     @AfterMethod(alwaysRun = true)

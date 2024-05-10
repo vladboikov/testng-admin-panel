@@ -1,5 +1,9 @@
 base\BasePage.class
+pages\actions\DashboardPage.class
 pages\actions\SignInPage.class
+pages\locators\DashboardPageLocators.class
 pages\HomePage.class
+base\Roles.class
+base\Credentials.class
 pages\locators\SignInPageLocators.class
 base\Constants.class
