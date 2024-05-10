@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-10T00:00:41 CDT" name="Admin Panel" finished-at="2024-05-10T00:00:44 CDT" duration-ms="3032">
+  <suite started-at="2024-05-10T00:44:43 CDT" name="Admin Panel" finished-at="2024-05-10T00:44:47 CDT" duration-ms="3331">
     <groups>
     </groups>
-    <test started-at="2024-05-10T00:00:41 CDT" name="Admins" finished-at="2024-05-10T00:00:44 CDT" duration-ms="3032">
+    <test started-at="2024-05-10T00:44:43 CDT" name="Admins" finished-at="2024-05-10T00:44:47 CDT" duration-ms="3331">
       <class name="testcases.adminpanel.admins.Admins">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.adminpanel.admins.Admins@58670130]" started-at="2024-05-10T00:00:41 CDT" name="setUp" finished-at="2024-05-10T00:00:43 CDT" duration-ms="1737" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.adminpanel.admins.Admins@f27ea3]" started-at="2024-05-10T00:44:43 CDT" name="setUp" finished-at="2024-05-10T00:44:46 CDT" duration-ms="2063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="doLogin()[pri:0, instance:testcases.adminpanel.admins.Admins@58670130]" started-at="2024-05-10T00:00:43 CDT" name="doLogin" finished-at="2024-05-10T00:00:44 CDT" duration-ms="1224" status="PASS">
+        <test-method signature="doLogin()[pri:0, instance:testcases.adminpanel.admins.Admins@f27ea3]" started-at="2024-05-10T00:44:46 CDT" name="doLogin" finished-at="2024-05-10T00:44:47 CDT" duration-ms="1088" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.adminpanel.admins.Admins@58670130]" started-at="2024-05-10T00:00:44 CDT" name="tearDown" finished-at="2024-05-10T00:00:44 CDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.adminpanel.admins.Admins@f27ea3]" started-at="2024-05-10T00:44:47 CDT" name="tearDown" finished-at="2024-05-10T00:44:47 CDT" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -12,11 +12,12 @@ import pages.locators.DashboardPageLocators;
 public class Admins extends BaseTest {
 
     @Epic("Admin Panel")
-    @Description("Admin Login Testtttttttttttttttttt")
+    @Description("Admin Login Test")
     @Test
     public void doLogin() {
         SignInPage page = new SignInPage(driver, Roles.ADMIN);
         page.doLogin();
+
         DashboardPageLocators dashboard = new DashboardPageLocators();
         Assert.assertTrue(dashboard.sidebar.isDisplayed());
     }
