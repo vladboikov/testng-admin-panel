@@ -37,6 +37,7 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
+
         if (InstanceData.BROWSER.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             log.debug("Launching Firefox");

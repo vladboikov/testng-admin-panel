@@ -1,6 +1,6 @@
 package base.data;
 
-public enum Roles {
+public enum UserRole {
 
     ADMIN, PAYIN_OPERATOR, PAYOUT_OPERATOR, OFFICE_ADMIN, MERCHANT, SUPPORT
 }
