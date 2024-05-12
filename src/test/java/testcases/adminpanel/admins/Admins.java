@@ -24,4 +24,6 @@ public class Admins extends BaseTest {
         DashboardPageLocators dashboard = new DashboardPageLocators();
         Assert.assertTrue(dashboard.sidebar.isDisplayed());
     }
+
+    
 }
