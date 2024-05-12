@@ -6,4 +6,4 @@ pages\locators\DashboardPageLocators.class
 pages\HomePage.class
 base\data\InstanceData.class
 pages\locators\SignInPageLocators.class
-base\data\Roles.class
+base\data\UserRole.class
