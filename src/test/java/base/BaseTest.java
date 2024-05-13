@@ -52,7 +52,7 @@ public class BaseTest {
             options.addArguments("enable-automation");
             options.addArguments("--no-sandbox");
             options.addArguments("disable-dev-shm-usage");
-//        options.addArguments("--headless=chrome");
+            options.addArguments("--headless=chrome");
 //        options.addArguments("--window-size=2560,1440");
             options.addArguments("disable-infobars");
             options.addArguments("--ignore-certificate-errors");
