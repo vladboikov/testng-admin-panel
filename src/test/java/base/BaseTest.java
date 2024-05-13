@@ -56,6 +56,8 @@ public class BaseTest {
 //        options.addArguments("--window-size=2560,1440");
             options.addArguments("disable-infobars");
             options.addArguments("--ignore-certificate-errors");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--ignore-ssl-errors=yes");
             options.addArguments("disable-browser-side-navigation");
             options.addArguments("disable-gpu");
             options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
