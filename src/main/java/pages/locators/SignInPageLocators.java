@@ -10,7 +10,7 @@ import static base.BasePage.driver;
 public class SignInPageLocators {
 
     public SignInPageLocators() {
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
     }
 
     @FindBy(xpath = "//input[@type='email']")
@@ -19,6 +19,6 @@ public class SignInPageLocators {
     @FindBy(xpath = "//input[@type='password']")
     public WebElement passwordInput;
 
-    @FindBy(xpath = "//input[@type='submit']")
+    @FindBy(xpath = "//input[@type='submit1']")
     public WebElement signInButton;
 }
