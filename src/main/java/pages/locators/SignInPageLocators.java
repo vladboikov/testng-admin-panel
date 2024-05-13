@@ -19,6 +19,6 @@ public class SignInPageLocators {
     @FindBy(xpath = "//input[@type='password']")
     public WebElement passwordInput;
 
-    @FindBy(xpath = "//input[@type='submit']")
+    @FindBy(xpath = "//input[@type='submit1']")
     public WebElement signInButton;
 }
