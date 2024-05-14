@@ -19,6 +19,10 @@ public class Sidebar extends BasePage {
 
     }
 
+    public void nothing() {
+        
+    }
+
     public void clickOnTransactions() {
         sidebar.transactionsButton.click();
     }
