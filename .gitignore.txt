@@ -1,1 +1,3 @@
-/allure-results/
+allure-results/
+*.json
+*.png
