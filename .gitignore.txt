@@ -1,1 +1,1 @@
-allure-results/
+/allure-results/
