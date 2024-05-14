@@ -16,11 +16,14 @@ public class Sidebar extends BasePage {
     public Sidebar(WebDriver driver) {
         super(driver);
         this.sidebar = new SidebarLocators();
-
     }
 
     public void clickOnTransactions() {
         sidebar.transactionsButton.click();
+    }
+
+    public void waitForExpandedSidebar() {
+        wait.until(d -> sidebar.expandedSidebar.isDisplayed());
     }
 
     public void gotoPayins() {
@@ -40,5 +43,6 @@ public class Sidebar extends BasePage {
     public void expandSidebar() {
         log.info("Clicking on expand sidebar button");
         sidebar.expandSidebarButton.click();
+        waitForExpandedSidebar();
     }
 }

@@ -21,4 +21,7 @@ public class SidebarLocators {
 
     @FindBy(xpath = "//span[contains(text(), 'Expand')]/ancestor::button")
     public WebElement expandSidebarButton;
+
+    @FindBy(xpath = "//body[contains(@class, 'sidebar-expanded')]")
+    public WebElement expandedSidebar;
 }
