@@ -39,7 +39,7 @@ public class BaseTest {
     public void setUp() {
         if (InstanceData.BROWSER.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
-            log.debug("Launching Firefox");
+            log.debug("Launching Firefox Browser");
         } else if (InstanceData.BROWSER.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             Map<String, Object> prefs = new HashMap<String, Object>();
@@ -53,7 +53,7 @@ public class BaseTest {
             options.addArguments("--no-sandbox");
             options.addArguments("disable-dev-shm-usage");
             options.addArguments("--headless=chrome");
-//        options.addArguments("--window-size=2560,1440");
+//          options.addArguments("--window-size=2560,1440");
             options.addArguments("disable-infobars");
             options.addArguments("--ignore-certificate-errors");
             options.addArguments("--disable-dev-shm-usage");
@@ -66,10 +66,10 @@ public class BaseTest {
             for (String winHandle : driver.getWindowHandles()) {
                 driver.switchTo().window(winHandle);
             }
-            log.debug("Launching Chrome");
+            log.debug("Launching Chrome Browser");
         } else if (InstanceData.BROWSER.equals("ie")) {
             WebDriverManager.iedriver().setup();
-            log.debug("Launching IE");
+            log.debug("Launching IE Browser");
         }
         driver.manage().window().maximize();
         driver.get(InstanceData.TEST_SUITE_URL);

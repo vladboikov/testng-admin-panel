@@ -13,13 +13,12 @@ public class CustomListeners extends BaseTest implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
+        log.info("Starting test case => " + result.getName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        String methodName = result.getMethod().getMethodName();
-        String logText = "<b>" + "TEST CASE: " + methodName.toUpperCase() + " PASSED" + "</b>";
-        log.info(logText);
+        log.info("Test case passed => " + result.getName());
     }
 
     @Override
@@ -28,11 +27,12 @@ public class CustomListeners extends BaseTest implements ITestListener {
                 "Screenshot", "image/png", "png",
                 ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)
         );
-        log.info("TEST FAILED");
+        log.error("Test case failed => " + result.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
+        log.info("Test case skipped => " + result.getName());
     }
 
     @Override

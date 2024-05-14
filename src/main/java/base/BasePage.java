@@ -10,6 +10,7 @@ public class BasePage {
     public static WebDriver driver;
     public static Logger log = LogManager.getLogger(BasePage.class.getName());
 
+
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
         PageFactory.initElements(driver,this);
