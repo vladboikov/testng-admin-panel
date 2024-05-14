@@ -53,7 +53,7 @@ public class BaseTest {
             options.addArguments("--no-sandbox");
             options.addArguments("disable-dev-shm-usage");
             options.addArguments("--headless=chrome");
-//          options.addArguments("--window-size=2560,1440");
+            options.addArguments("--window-size=1920,1080");
             options.addArguments("disable-infobars");
             options.addArguments("--ignore-certificate-errors");
             options.addArguments("--disable-dev-shm-usage");

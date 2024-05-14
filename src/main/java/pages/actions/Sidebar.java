@@ -18,7 +18,7 @@ public class Sidebar extends BasePage {
         this.sidebar = new SidebarLocators();
 
     }
-    
+
     public void clickOnTransactions() {
         sidebar.transactionsButton.click();
     }
