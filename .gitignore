@@ -2,7 +2,7 @@
 target/
 *.json
 *.png
-pom.xml
+
 /classes
 .idea
 *.iml
