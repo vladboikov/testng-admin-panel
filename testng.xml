@@ -9,7 +9,4 @@
     <listeners>
         <listener class-name="listeners.CustomListeners"/>
     </listeners>
-    <!--
-
-      -->
 </suite>

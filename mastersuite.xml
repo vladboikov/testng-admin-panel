@@ -4,10 +4,5 @@
 
 <suite-files>
     <suite-file path="testng.xml"/>
-<!--    <suite-file path="regression.xml"/>-->
 </suite-files>
-
-    <!--
-
-      -->
 </suite>
