@@ -2,7 +2,7 @@ package base.data;
 
 public class Credentials {
 
-    //Test user credentials
+    //Test users credentials
     public static final String AdminEmail, AdminPassword;
     static {
         AdminEmail = "admin@admin.admin";

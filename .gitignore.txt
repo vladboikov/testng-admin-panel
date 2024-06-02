@@ -1,3 +1,4 @@
-allure-results/
+/allure-results/
+/target/
 *.json
 *.png

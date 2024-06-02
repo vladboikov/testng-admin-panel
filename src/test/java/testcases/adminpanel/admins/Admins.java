@@ -9,14 +9,17 @@ import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.actions.Filter;
+import pages.actions.Scopes;
 import pages.actions.Sidebar;
 import pages.actions.SignInPage;
 import pages.locators.DashboardPageLocators;
+import pages.locators.FilterLocators;
 import pages.locators.SidebarLocators;
+import pages.locators.TableLocators;
 
 public class Admins extends BaseTest {
 
-    public void login() {
+    private void login() {
         SignInPage page = new SignInPage(driver, UserRole.ADMIN);
         page.doLogin();
     }
@@ -57,6 +60,27 @@ public class Admins extends BaseTest {
         sidebar.expandSidebar();
         sidebar.gotoPayins();
 
-        Assert.assertTrue(new Filter(driver).filterButton.isDisplayed());
+        Assert.assertTrue(new FilterLocators().filterButton.isDisplayed());
+    }
+
+    @Epic("Admin Panel")
+    @Description("Filtering payins by id")
+    @Severity(SeverityLevel.NORMAL)
+    @Test
+    public void filterPayinsById() {
+        login();
+
+        Sidebar sidebar = new Sidebar(driver);
+        sidebar.expandSidebar();
+        sidebar.gotoPayins();
+
+        Filter filter = new Filter(driver);
+        filter.openFilter();
+
+        Scopes scopes = new Scopes(driver);
+        scopes.clickOnAllScope();
+
+        filter.filterById();
+        Assert.assertEquals(new TableLocators().getId(), filter.getPayinId());
     }
 }

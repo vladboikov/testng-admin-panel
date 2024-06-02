@@ -13,7 +13,6 @@ import org.testng.annotations.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class BaseTest {
 
@@ -21,13 +20,12 @@ public class BaseTest {
     public static String initialWindow;
     public static Logger log = LogManager.getLogger(BaseTest.class.getName());
 
-
     public static Set<String> getAllWindows() {
         return driver.getWindowHandles();
     }
 
     public static void switchToFirstNewWindow() {
-        var newWindows = getAllWindows().stream().filter(w -> !w.equals(initialWindow)).collect(Collectors.toList());
+        var newWindows = getAllWindows().stream().filter(w -> !w.equals(initialWindow)).toList();
         driver.switchTo().window(newWindows.stream().findFirst().get());
     }
 
