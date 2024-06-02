@@ -1,4 +1,0 @@
-allure-results/
-/target/
-*.json
-*.png
