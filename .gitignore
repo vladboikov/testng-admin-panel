@@ -5,6 +5,7 @@ target/
 pom.xml
 /classes
 .idea
-*.iml
+
 target/
 *.crx
+*.bat
