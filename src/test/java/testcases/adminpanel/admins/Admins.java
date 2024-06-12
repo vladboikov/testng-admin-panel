@@ -18,7 +18,11 @@ import pages.locators.SidebarLocators;
 import pages.locators.TableLocators;
 
 public class Admins extends BaseTest {
-    
+    DashboardPageLocators dashboard;
+    Sidebar sidebar;
+    Filter filter;
+    Scopes scopes;
+
     @BeforeMethod
     public void beforeMethodActions() {
         SignInPage.doLogin(driver, UserRole.ADMIN);
@@ -29,7 +33,7 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     @Test
     public void loginByAdmin() {
-        DashboardPageLocators dashboard = new DashboardPageLocators();
+        dashboard = new DashboardPageLocators();
         Assert.assertTrue(dashboard.sidebar.isDisplayed());
     }
 
@@ -38,7 +42,7 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void expandSidebar() {
-        Sidebar sidebar = new Sidebar(driver);
+        sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.clickOnTransactions();
 
@@ -50,7 +54,7 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void openPayins() {
-        Sidebar sidebar = new Sidebar(driver);
+        sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.gotoPayins();
 
@@ -62,17 +66,16 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void filterPayinsById() {
-        Sidebar sidebar = new Sidebar(driver);
+        sidebar = new Sidebar(driver);
+        filter = new Filter(driver);
+        scopes = new Scopes(driver);
+
         sidebar.expandSidebar();
         sidebar.gotoPayins();
-
-        Filter filter = new Filter(driver);
         filter.openFilter();
-
-        Scopes scopes = new Scopes(driver);
         scopes.clickOnAllScope();
-
         filter.filterById();
+
         Assert.assertEquals(new TableLocators().getId(), filter.getPayinId());
     }
 }

@@ -9,68 +9,61 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
+import utils.BrowserUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class BaseTest {
-
     public static WebDriver driver;
-    public static String initialWindow;
     public static Logger log = LogManager.getLogger(BaseTest.class.getName());
-
-    public static Set<String> getAllWindows() {
-        return driver.getWindowHandles();
-    }
-
-    public static void switchToFirstNewWindow() {
-        var newWindows = getAllWindows().stream().filter(w -> !w.equals(initialWindow)).toList();
-        driver.switchTo().window(newWindows.stream().findFirst().get());
-    }
-
-    public void switchToWindow(String windowId) {
-        driver.switchTo().window(windowId);
-    }
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
         if (InstanceData.BROWSER.equals("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
             log.debug("Launching Firefox Browser");
+            WebDriverManager.firefoxdriver().setup();
         } else if (InstanceData.BROWSER.equals("chrome")) {
+            log.debug("Launching Chrome Browser");
             WebDriverManager.chromedriver().setup();
+
             Map<String, Object> prefs = new HashMap<String, Object>();
             prefs.put("profile.default_content_setting_values.notifications", 2);
             prefs.put("credentials_enable_service", false);
             prefs.put("profile.password_manager_enabled", false);
 
-            var options = new ChromeOptions();
-            options.addArguments("start-maximized");
-            options.addArguments("enable-automation");
-            options.addArguments("--no-sandbox");
-            options.addArguments("disable-dev-shm-usage");
-            options.addArguments("--headless=chrome");
-            options.addArguments("--window-size=1920,1080");
-            options.addArguments("disable-infobars");
-            options.addArguments("--ignore-certificate-errors");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--ignore-ssl-errors=yes");
-            options.addArguments("disable-browser-side-navigation");
-            options.addArguments("disable-gpu");
-            options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
+            var options = getChromeOptions();
             driver = new ChromeDriver(options);
-            initialWindow = driver.getWindowHandle();
+
+            BrowserUtils.initialWindow = driver.getWindowHandle();
             for (String winHandle : driver.getWindowHandles()) {
                 driver.switchTo().window(winHandle);
             }
-            log.debug("Launching Chrome Browser");
+            log.debug("Chrome Browser launched successfully");
         } else if (InstanceData.BROWSER.equals("ie")) {
-            WebDriverManager.iedriver().setup();
             log.debug("Launching IE Browser");
+            WebDriverManager.iedriver().setup();
         }
         driver.manage().window().maximize();
         driver.get(InstanceData.TEST_SUITE_URL);
+    }
+
+    private static ChromeOptions getChromeOptions() {
+        var options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        options.addArguments("enable-automation");
+        options.addArguments("--no-sandbox");
+        options.addArguments("disable-dev-shm-usage");
+        options.addArguments("--headless=chrome");
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("disable-infobars");
+        options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--ignore-ssl-errors=yes");
+        options.addArguments("disable-browser-side-navigation");
+        options.addArguments("disable-gpu");
+        options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
+        return options;
     }
 
     @AfterMethod(alwaysRun = true)
