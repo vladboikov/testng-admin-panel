@@ -11,11 +11,11 @@ import org.testng.annotations.*;
 import pages.actions.Filter;
 import pages.actions.Scopes;
 import pages.actions.Sidebar;
-import pages.actions.SignInPage;
 import pages.locators.DashboardPageLocators;
 import pages.locators.FilterLocators;
 import pages.locators.SidebarLocators;
 import pages.locators.TableLocators;
+import static pages.actions.SignInPage.doLogin;
 
 public class Admins extends BaseTest {
     DashboardPageLocators dashboard;
@@ -25,7 +25,7 @@ public class Admins extends BaseTest {
 
     @BeforeMethod
     public void beforeMethodActions() {
-        SignInPage.doLogin(driver, UserRole.ADMIN);
+        doLogin(driver, UserRole.ADMIN);
     }
 
     @Epic("Admin Panel")

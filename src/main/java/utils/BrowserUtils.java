@@ -1,13 +1,15 @@
 package utils;
 
-import base.BaseTest;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.Set;
 
-public class BrowserUtils extends BaseTest {
+import static base.BasePage.driver;
+
+public class BrowserUtils {
 
     public static String initialWindow;
 
@@ -32,6 +34,11 @@ public class BrowserUtils extends BaseTest {
     public static void hover(WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
+    }
+
+    public static void pressEnterKey() {
+        Actions builder = new Actions(driver);
+        builder.keyDown(Keys.ENTER).build().perform();
     }
 
     public static void scrollToElement(WebElement element) {

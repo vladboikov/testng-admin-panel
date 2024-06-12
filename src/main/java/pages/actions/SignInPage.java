@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import pages.locators.SignInPageLocators;
 
 public class SignInPage extends BasePage {
-
     static SignInPageLocators signInLocators;
 
     public SignInPage(WebDriver driver) {

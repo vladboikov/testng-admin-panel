@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.locators.FilterLocators;
 import pages.locators.ScopesLocators;
 import pages.locators.TableLocators;
-import utils.Utils;
+import utils.BrowserUtils;
 
 import java.time.Duration;
 
@@ -34,7 +34,7 @@ public class Filter extends BasePage {
     public void filterById() {
         log.info("Filtering by payin id");
         filter.filterByIdInput.sendKeys(payinId);
-        Utils.pressEnterKey();
+        BrowserUtils.pressEnterKey();
         wait.until(d -> table.id.getText().equals(payinId));
     }
 
