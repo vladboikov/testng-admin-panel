@@ -2,7 +2,6 @@
 target/
 *.json
 *.png
-
 /classes
 .idea
 *.iml

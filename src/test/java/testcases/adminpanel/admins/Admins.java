@@ -24,13 +24,16 @@ public class Admins extends BaseTest {
         page.doLogin();
     }
 
+    @BeforeMethod
+    public void beforeMethodActions() {
+        login();
+    }
+
     @Epic("Admin Panel")
     @Description("Admin Login test")
     @Severity(SeverityLevel.CRITICAL)
     @Test
     public void loginByAdmin() {
-        login();
-
         DashboardPageLocators dashboard = new DashboardPageLocators();
         Assert.assertTrue(dashboard.sidebar.isDisplayed());
     }
@@ -40,8 +43,6 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void expandSidebar() {
-        login();
-
         Sidebar sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.clickOnTransactions();
@@ -54,8 +55,6 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void openPayins() {
-        login();
-
         Sidebar sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.gotoPayins();
@@ -68,8 +67,6 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void filterPayinsById() {
-        login();
-
         Sidebar sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.gotoPayins();
