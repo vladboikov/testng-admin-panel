@@ -18,15 +18,10 @@ import pages.locators.SidebarLocators;
 import pages.locators.TableLocators;
 
 public class Admins extends BaseTest {
-
-    private void login() {
-        SignInPage page = new SignInPage(driver, UserRole.ADMIN);
-        page.doLogin();
-    }
-
+    
     @BeforeMethod
     public void beforeMethodActions() {
-        login();
+        SignInPage.doLogin(driver, UserRole.ADMIN);
     }
 
     @Epic("Admin Panel")
