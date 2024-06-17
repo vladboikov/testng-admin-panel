@@ -72,7 +72,9 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        driver.close();
-        driver.quit();
+        if (driver != null) {
+            driver.close();
+            driver.quit();
+        }
     }
 }
