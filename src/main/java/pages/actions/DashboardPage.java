@@ -1,6 +1,6 @@
 package pages.actions;
 
-import base.BasePage;
+import data.base.BasePage;
 import org.openqa.selenium.WebDriver;
 import pages.locators.DashboardPageLocators;
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.Set;
 
-import static base.BasePage.driver;
+import static data.base.BasePage.driver;
 
 public class BrowserUtils {
 

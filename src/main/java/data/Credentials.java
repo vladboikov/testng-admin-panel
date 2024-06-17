@@ -1,4 +1,4 @@
-package base.data;
+package data;
 
 public class Credentials {
 

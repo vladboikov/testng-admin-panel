@@ -1,4 +1,4 @@
-package base.data;
+package data;
 
 public class InstanceData {
 	public static final String BROWSER = "chrome";

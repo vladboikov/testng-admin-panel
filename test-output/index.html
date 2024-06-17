@@ -181,21 +181,21 @@
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Admin_Panel');
-function tableData_Admin_Panel() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'doLogin')
-data.setCell(0, 2, 'testcases.adminpanel.admins.Admins')
-data.setCell(0, 3, 1900);
-window.suiteTableData['Admin_Panel']= { tableData: data, tableDiv: 'times-div-Admin_Panel'}
-return data;
-}
+                  suiteTableInitFunctions.push('tableData_Admin_Panel');
+                  function tableData_Admin_Panel() {
+                  var base = new google.visualization.DataTable();
+                  base.addColumn('number', 'Number');
+                  base.addColumn('string', 'Method');
+                  base.addColumn('string', 'Class');
+                  base.addColumn('number', 'Time (ms)');
+                  base.addRows(1);
+                  base.setCell(0, 0, 0)
+                  base.setCell(0, 1, 'doLogin')
+                  base.setCell(0, 2, 'testcases.adminpanel.admins.Admins')
+                  base.setCell(0, 3, 1900);
+                  window.suiteTableData['Admin_Panel']= { tableData: base, tableDiv: 'times-div-Admin_Panel'}
+                  return base;
+                  }
               </script>
               <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Admin_Panel">

@@ -1,6 +1,6 @@
 package base;
 
-import base.data.InstanceData;
+import data.InstanceData;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,7 +24,7 @@ public class BaseTest {
         options.addArguments("enable-automation");
         options.addArguments("--no-sandbox");
         options.addArguments("disable-dev-shm-usage");
-        options.addArguments("--headless=chrome");
+//        options.addArguments("--headless=chrome");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("disable-infobars");
         options.addArguments("--ignore-certificate-errors");

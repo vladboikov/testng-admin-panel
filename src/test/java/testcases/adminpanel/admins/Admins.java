@@ -1,7 +1,7 @@
 package testcases.adminpanel.admins;
 
 import base.BaseTest;
-import base.data.UserRole;
+import data.UserRole;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
@@ -18,10 +18,6 @@ import pages.locators.TableLocators;
 import static pages.actions.SignInPage.doLogin;
 
 public class Admins extends BaseTest {
-    DashboardPageLocators dashboard;
-    Sidebar sidebar;
-    Filter filter;
-    Scopes scopes;
 
     @BeforeMethod
     public void beforeMethodActions() {
@@ -33,7 +29,7 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     @Test
     public void loginByAdmin() {
-        dashboard = new DashboardPageLocators();
+        DashboardPageLocators dashboard = new DashboardPageLocators();
         Assert.assertTrue(dashboard.sidebar.isDisplayed());
     }
 
@@ -42,7 +38,7 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void expandSidebar() {
-        sidebar = new Sidebar(driver);
+        Sidebar sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.clickOnTransactions();
 
@@ -54,7 +50,7 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void openPayins() {
-        sidebar = new Sidebar(driver);
+        Sidebar sidebar = new Sidebar(driver);
         sidebar.expandSidebar();
         sidebar.gotoPayins();
 
@@ -66,9 +62,9 @@ public class Admins extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void filterPayinsById() {
-        sidebar = new Sidebar(driver);
-        filter = new Filter(driver);
-        scopes = new Scopes(driver);
+        Sidebar sidebar = new Sidebar(driver);
+        Filter filter = new Filter(driver);
+        Scopes scopes = new Scopes(driver);
 
         sidebar.expandSidebar();
         sidebar.gotoPayins();

@@ -1,8 +1,8 @@
 package pages.actions;
 
-import base.BasePage;
-import base.data.Credentials;
-import base.data.UserRole;
+import data.base.BasePage;
+import data.Credentials;
+import data.UserRole;
 import org.openqa.selenium.WebDriver;
 import pages.locators.SignInPageLocators;
 
