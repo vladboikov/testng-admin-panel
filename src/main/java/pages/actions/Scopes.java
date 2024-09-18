@@ -2,11 +2,15 @@ package pages.actions;
 
 import data.base.BasePage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.locators.ScopesLocators;
-import utils.WaitUtils;
+
+import java.time.Duration;
 
 public class Scopes extends BasePage {
 
+    Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     public ScopesLocators scopes;
 
     public Scopes(WebDriver driver) {
@@ -16,6 +20,6 @@ public class Scopes extends BasePage {
 
     public void clickOnAllScope() {
         scopes.allScope.click();
-        WaitUtils.waitUntilElementDisplayed(scopes.selectedAllScope, 10);
+        wait.until(d -> scopes.selectedAllScope.isDisplayed());
     }
 }

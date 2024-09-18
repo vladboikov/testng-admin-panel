@@ -72,6 +72,6 @@ public class Admins extends BaseTest {
         scopes.clickOnAllScope();
         filter.filterById();
 
-        Assert.assertEquals(new TableLocators().getId(0), filter.getPayinId());
+        Assert.assertEquals(new TableLocators().getId(), filter.getPayinId());
     }
 }

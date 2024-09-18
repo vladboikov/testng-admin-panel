@@ -1,6 +1,5 @@
 package pages.actions;
 
-import data.InstanceData;
 import data.base.BasePage;
 import data.Credentials;
 import data.UserRole;
@@ -17,7 +16,6 @@ public class SignInPage extends BasePage {
     public static void doLogin(WebDriver driver, UserRole role) {
         new SignInPage(driver);
         signInLocators = new SignInPageLocators();
-        driver.get(InstanceData.TEST_SUITE_URL);
 
         switch (role) {
             case ADMIN:

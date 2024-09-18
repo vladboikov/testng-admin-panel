@@ -3,13 +3,14 @@ package pages.locators;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import static data.base.BasePage.driver;
 
 public class FilterLocators {
 
     public FilterLocators() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
     @FindBy(xpath = "//button[text()='Фильтры']")

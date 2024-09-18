@@ -10,7 +10,8 @@ import static data.base.BasePage.driver;
 public class ScopesLocators {
 
     public ScopesLocators() {
-        PageFactory.initElements(driver, this);}
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+    }
 
     @FindBy(xpath = "//a[text()='Все']")
     public WebElement allScope;

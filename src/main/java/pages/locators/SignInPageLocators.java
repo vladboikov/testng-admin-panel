@@ -10,7 +10,8 @@ import static data.base.BasePage.driver;
 public class SignInPageLocators {
 
     public SignInPageLocators() {
-        PageFactory.initElements(driver, this);    }
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+    }
 
     @FindBy(xpath = "//input[@type='email']")
     public WebElement emailInput;

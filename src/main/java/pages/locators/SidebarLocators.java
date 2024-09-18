@@ -10,7 +10,7 @@ import static data.base.BasePage.driver;
 public class SidebarLocators {
 
     public SidebarLocators() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
     @FindBy(xpath = "//span[text()= \"Транзакции\"]/ancestor::a")
