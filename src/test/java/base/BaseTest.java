@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 import utils.BrowserUtils;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +33,8 @@ public class BaseTest {
         options.addArguments("--ignore-ssl-errors=yes");
         options.addArguments("disable-browser-side-navigation");
         options.addArguments("disable-gpu");
+        options.addArguments("--disable-notifications");
+        options.setImplicitWaitTimeout(Duration.ofSeconds(10));
         options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
         return options;
     }
@@ -46,14 +49,9 @@ public class BaseTest {
                 prefs.put("profile.default_content_setting_values.notifications", 2);
                 prefs.put("credentials_enable_service", false);
                 prefs.put("profile.password_manager_enabled", false);
-
                 var options = getChromeOptions();
                 driver = new ChromeDriver(options);
-
                 BrowserUtils.initialWindow = driver.getWindowHandle();
-                for (String winHandle : driver.getWindowHandles()) {
-                    driver.switchTo().window(winHandle);
-                }
                 log.debug("Chrome Browser launched successfully");
                 break;
             case "firefox":
@@ -67,7 +65,6 @@ public class BaseTest {
                 log.debug("IE Browser launched successfully");
         }
         driver.manage().window().maximize();
-        driver.get(InstanceData.TEST_SUITE_URL);
     }
 
     @AfterMethod(alwaysRun = true)
